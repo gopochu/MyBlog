@@ -1,0 +1,52 @@
+
+
+
+
+
+
+
+
+
+
+
+.post-container {
+    display: grid;
+    width: 100%;
+    grid-row-gap: 40px;
+    grid-column-gap: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    margin-bottom: 50px;
+    padding: 2rem;
+}
+
+.post-container-preview {
+    display: flex;
+    flex-direction: column;
+    border: 1px;
+    border-radius: 6px;
+    padding:0.5em 1em;
+}
+
+.post-container-preview p:nth-child(2){
+    color: #7c7c7c;
+    font-size: 1.2rem;
+}
+
+.post-container-preview-button {
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    min-height: 40px;
+    padding: 0 1em;
+    width: fit-content;
+    border: none;
+    background-color: #0000ff;
+
+    cursor: pointer;
+
+}
+
+.post-container-preview-link {
+    margin-left: auto;
+}

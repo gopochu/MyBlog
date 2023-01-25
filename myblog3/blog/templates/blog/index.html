@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+
+
+
+
+{% block content %}
+
+<div class="menu">
+    {% if active == -1 %}
+    <strong>Все категории</strong>
+    {% else %}
+    <a href="{% url 'home' %}">Все категории</a>
+    {% endif %}
+
+    {% for c in categories %}
+        <a href="{% url 'category_view' c.slug %}">{{c.name}}</a>
+    {% endfor %}
+</div>
+
+<div class="post-container">
+    {% for p in posts %}
+    
+        <div class="post-container-preview">
+        
+        <h3>{{ p.title }}</h3>
+        <a href="{{p.get_absolute_url}}" class="post-container-preview-link"><button class="post-container-preview-button">Читать далее</button></a>
+        {% if p.photo %}
+            <img src="{{p.photo.url}}", width="400" height="300">
+        {% endif %}
+        </div>
+
+        
+    {% endfor %}
+</div>
+{% endblock %}
